@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login and Registration Form</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      form {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #ddd;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 400px;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 0;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #b7b7b7;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+      button:hover {
+        background-color: #a6a6a6;
+      }
+      .container {
+        padding: 16px;
+      }
+      .register-link {
+        text-align: center;
+        margin-top: 16px;
+      }
+      .error-message {
+        color: #f44336;
+        margin: 10px 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="home.html" id="login-form">
+      <h2>Login Form</h2>
+      <div class="container">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+        
+        <div class="error-message" id="login-error-message"></div>
+        
+        <button type="submit">Login</button>
+      </div>
+    </form>
+    
+
+   
+
+    <script>
+ 
+var modal = document.getElementById("loginModal");
+
+
+var btn = document.getElementById("loginBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+var modal2 = document.getElementById("registerModal");
+
+
+var btn2 = document.getElementById("registerBtn");
+
+
+var span2 = document.getElementsByClassName("close")[1];
+
+
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+
+
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
+
